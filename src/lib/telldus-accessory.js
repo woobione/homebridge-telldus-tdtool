@@ -135,6 +135,7 @@ class TelldusSwitch extends TelldusAccessory {
    */
   getServices() {
     this.log('getServices called')
+    this.log(this.config)
     const controllerService = new this.Service.Lightbulb(this.name)
 
     controllerService.getCharacteristic(this.Characteristic.On)
